@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
   <div class='container'>
     <div class="navbar-header">
@@ -16,10 +17,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      
       <%= link_to root_path, class: 'navbar-brand' do %>
-        <i class="fa fa-snowflake-o"></i>
-        Dev Match
+      <i class="fa fa-snowflake-o"></i>
+        EAR Creative
       <% end %>
+      
     </div>
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       <div class="nav navbar-nav navbar-right">
@@ -37,10 +40,12 @@
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>
+
 <div class="container">
   <% flash.each do |key, value| %>
     <%= content_tag :div, value, class: "alert alert-#{key}" %>
   <% end %>
+
   <%= yield %>
 </div>
 </body>
